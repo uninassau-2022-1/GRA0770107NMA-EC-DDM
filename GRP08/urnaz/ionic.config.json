@@ -1,0 +1,7 @@
+{
+  "name": "urnaz",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

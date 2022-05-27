@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Urna
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Urna</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card>
+      <ion-img src=".\assets\ilupi-patente-urna-eletronica-blog.png"></ion-img>
+    </ion-card>
+
+    <ion-item>
+      <ion-label position="stacked"></ion-label>
+      <ion-input placeholder="Número do candidato" [(ngModel)]="voto"></ion-input>
+    </ion-item>
+    <ion-button shape="round" expand="full" size="small" (click)="votar(voto)">Confirmar voto</ion-button>
+  </ion-card>
+
+  <ion-card>
+    
+  </ion-card>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+</ion-content>
