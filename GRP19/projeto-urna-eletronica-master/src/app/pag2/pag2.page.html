@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Super Mario</ion-card-title>
+      <ion-card-subtitle>Vice Luigi</ion-card-subtitle>      
+    </ion-card-header>
+    <ion-img src ="/assets/Super-Mario.png" id="imgMario"></ion-img>
+    <ion-card-content>
+      O mais antigo, tenho experiência de sobra, resumindo eu sou o milior...
+    </ion-card-content>
+    <br>
+    <ion-button color="success" expand="block" (click)="voto()">
+      Votar
+    </ion-button>
+  </ion-card>
+
+</ion-content>
