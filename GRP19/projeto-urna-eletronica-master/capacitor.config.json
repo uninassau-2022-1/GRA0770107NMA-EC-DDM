@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "UrnaEletronica",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
