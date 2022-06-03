@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Votação
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Votação</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card>
+      <ion-img src="../../assets/spidersvotacao.png"></ion-img>
+    </ion-card>
+
+    <ion-item>
+      <ion-label position="stacked"></ion-label>
+      <ion-input placeholder='Escolha seu "Miranha" favorito' [(ngModel)]="numero"></ion-input>
+    </ion-item>
+    <ion-button expand="block" fill="outline" (click)="votar(numero)">Confirmar voto</ion-button>
+  
+  </ion-card>
+  <ion-card-content>
+    <ion-label>Votos para Tom Holland = {{ this.votosTom }}</ion-label>
+    <br>
+    <ion-label>Votos para Tobey Maguire = {{ this.votosTobey }}</ion-label>
+    <br>
+    <ion-label>Votos para Andrew Garfield = {{ this.votosAndrew }}</ion-label>
+  </ion-card-content>
+  <ion-card>
+    
+  </ion-card>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+</ion-content>
