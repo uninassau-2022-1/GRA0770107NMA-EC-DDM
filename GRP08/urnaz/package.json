@@ -14,7 +14,7 @@
   "private": true,
   "dependencies": {
     "@angular/common": "~13.2.2",
-    "@angular/core": "~13.2.2",
+    "@angular/core": "^13.2.7",
     "@angular/forms": "~13.2.2",
     "@angular/platform-browser": "~13.2.2",
     "@angular/platform-browser-dynamic": "~13.2.2",
@@ -45,6 +45,7 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
+    "cordova-browser": "^6.0.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^5.0.0",
@@ -80,7 +81,8 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "browser"
     ]
   }
 }
