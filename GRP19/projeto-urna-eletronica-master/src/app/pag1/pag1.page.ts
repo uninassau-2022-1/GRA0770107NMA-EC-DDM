@@ -33,7 +33,7 @@ export class Pag1Page implements OnInit {
   ionViewDidEnter(){
     this.buscarCandidatos();
   }
-  
+
 
   async pegarVoto(key: any): Promise<any> {
     try{
@@ -50,9 +50,13 @@ export class Pag1Page implements OnInit {
     if (this.pegarVoto('voto1') != null) {
       this.candidato.voto1 = this.candidato.voto1 + 1;
       await this.storageService.set(this.candidato.voto1, this.candidato);
-      this.route.navigateByUrl('/tabs/tab1');
+      this.route.navigateByUrl('/tabs/tab2');
       console.log(this.candidato.voto1);
     }
+  }
+
+  enviaVoto(voto: number) {
+    this.storageService.funcaoVoto(voto);
   }
 
 

@@ -20,15 +20,15 @@ export class StorageService {
 
   // Create and expose methods that users of this service can
   // call, for example:
-  public set(key: number, value: any) {
+  public set(key: any, value: any) {
     this._storage?.set(key, value);
   }
 
-  public get(key: number) {
+  public get(key: any) {
     this._storage?.get(key);
   }
 
-  public remove(key: number) {
+  public remove(key: any) {
     this._storage?.remove(key);
   }
 
@@ -38,6 +38,11 @@ export class StorageService {
       lista.push(value)
     });
     return lista;
+  }
+
+
+  funcaoVoto(voto: number) {
+    console.log(voto);
   }
 
 }
