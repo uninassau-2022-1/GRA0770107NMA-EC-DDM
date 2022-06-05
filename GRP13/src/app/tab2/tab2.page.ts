@@ -18,29 +18,24 @@ export class Tab2Page {
 
   }
   computar(voto: string) {
-
-
+    this.total_votos = (this.votar[0]['votos'][0] + this.votar[0]['votos'][1] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3]) + 1;
+    console.log("total de votos: " + this.total_votos);
+    
     switch (voto) {
       
       case '24':
         console.log(JSON.stringify(this.votar));
         this.votar[0]['votos'][0] = this.votar[0]['votos'][0] + 1; // conbilizar o votos
-        this.total_votos = this.votar[0]['votos'][0] + this.votar[0]['votos'][1] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        console.log("total de votos: " + this.total_votos);
-        this.votar[0]['ganhar'][0] = ((this.votar[0]['votos'][0] / this.total_votos) * 100);
-        console.log(`A chance de Gabriel ganhar é ${this.votar[0]['ganhar'][0]}} dos votos`);
+        console.log(`A chance de Gabriel ganhar é ${this.votar[0]['ganhar'][0]} % dos votos`);
         console.log("Você votou em Gabriel");
+      
         
 
         break;
       case '69':
         console.log(JSON.stringify(this.votar));
         this.votar[0]['votos'][1] = this.votar[0]['votos'][1] + 1;
-        this.total_votos = this.votar[0]['votos'][0] + this.votar[0]['votos'][1] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        this.total_votos = this.votar[0]['votos'][0] + this.votar[0]['votos'][1] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        console.log("total de votos: " + this.total_votos);
-        this.votar[0]['ganhar'][1] = ((this.votar[0]['votos'][1] / this.total_votos) * 100);
-        console.log(`A chance de Gabriel Power Guido é de ${this.votar[0]['ganhar'][1]}}% dos votos`);
+        console.log(`A chance de Gabriel Power Guido é de ${this.votar[0]['ganhar'][1]}% dos votos`);
         console.log("você votou em Power Guido");
       
         break;
@@ -48,12 +43,7 @@ export class Tab2Page {
       case '420':
         console.log(JSON.stringify(this.votar));
         this.votar[0]['votos'][2] = this.votar[0]['votos'][2] + 1;
-        this.total_votos = this.votar[0]['votos'][0] + this.votar[0]['votos'][1] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        this.total_votos = this.votar[0]['votos'][0] + this.votar[0]['votos'][1] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        this.total_votos = this.votar[0]['votos'][0] + this.votar[0]['votos'][1] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        console.log("total de votos: " + this.total_votos);
-        this.votar[0]['ganhar'][2] = ((this.votar[0]['votos'][2] / this.total_votos) * 100);
-        console.log(`A chance de Emma Conha ganhar é de ${this.votar[0]['ganhar'][2]}}% dos votos`);
+        console.log(`A chance de Emma Conha ganhar é de ${this.votar[0]['ganhar'][2]}% dos votos`);
         console.log("você votou em Emma Conha");
         
         break;
@@ -61,18 +51,16 @@ export class Tab2Page {
       case '666':
         console.log(JSON.stringify(this.votar));
         this.votar[0]['votos'][3] = this.votar[0]['votos'][3] + 1;
-        this.total_votos = this.votar[0]['votos'][0] + this.votar[0]['votos'][0] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        this.total_votos = this.votar[0]['votos'][1] + this.votar[0]['votos'][1] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        this.total_votos = this.votar[0]['votos'][2] + this.votar[0]['votos'][2] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3]; 
-        this.total_votos = this.votar[0]['votos'][3] + this.votar[0]['votos'][3] + this.votar[0]['votos'][2] + this.votar[0]['votos'][3];
-        console.log("total de votos: " + this.total_votos);
-        this.votar[0]['ganhar'][3] = ((this.votar[0]['votos'][3] / this.total_votos) * 100);
-        console.log(`A chance de Lucifer ganhar é de ${this.votar[0]['ganhar'][3]}}% dos votos`);
+        console.log(`A chance de Lucifer ganhar é de ${this.votar[0]['ganhar'][3]}% dos votos`);
         console.log("você votou em Lucifer");
         
         break;
     }
 
+    this.votar[0]['ganhar'][0] = ((this.votar[0]['votos'][0] / this.total_votos) * 100);
+    this.votar[0]['ganhar'][1] = ((this.votar[0]['votos'][1] / this.total_votos) * 100);
+    this.votar[0]['ganhar'][2] = ((this.votar[0]['votos'][2] / this.total_votos) * 100);
+    this.votar[0]['ganhar'][3] = ((this.votar[0]['votos'][3] / this.total_votos) * 100);
   }
 
 
