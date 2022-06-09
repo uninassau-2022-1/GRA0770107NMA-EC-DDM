@@ -47,19 +47,11 @@ export class Pag1Page implements OnInit {
   }
 
   async addVoto() {
-    if (this.pegarVoto('voto1') != null) {
-      this.candidato.voto1 = this.candidato.voto1 + 1;
-      await this.storageService.set(this.candidato.voto1, this.candidato);
-      this.route.navigateByUrl('/tabs/tab2');
-      console.log(this.candidato.voto1);
-    }
+      this.candidato.voto = this.candidato.voto + 1;
+      await this.storageService.set(this.candidato.voto, this.candidato);
+      this.route.navigateByUrl('/tabs/tab1');
+      console.log(this.candidato.voto);
   }
-
-  enviaVoto(voto: number) {
-    this.storageService.funcaoVoto(voto);
-  }
-
-
 }
 
 export class Pag1Page1 extends Tab2Page {

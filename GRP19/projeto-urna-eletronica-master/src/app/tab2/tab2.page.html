@@ -36,7 +36,7 @@
       <ion-avatar slot="start">
        <ion-img src="/assets/megaman-icon.png"></ion-img>
       </ion-avatar>
-      <ion-badge color="primary" slot="end" *ngFor="let v of listaVotos">{{v.voto1}}</ion-badge>
+      <ion-badge color="primary" slot="end" *ngFor="let v of listaVotos">{{v.voto}}</ion-badge>
     </ion-item>
 
     <ion-item button (click)="abrirPag('pag2')">
@@ -55,7 +55,7 @@
       <ion-badge color="primary" slot="end">0</ion-badge>
     </ion-item>
 
-    <ion-button color="danger" expand="block" (click)="excluirVotos(v.voto1)" *ngFor="let v of listaVotos">
+    <ion-button color="danger" expand="block" (click)="excluirVotos(v.voto)" *ngFor="let v of listaVotos">
       Limpar Votos
     </ion-button>
     
